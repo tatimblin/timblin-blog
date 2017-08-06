@@ -3,8 +3,8 @@ email: tatimblin@gmail.com
 description: >
   A collection of my works, unique findings, and front-end web demos, that I
   call the labs.
-baseurl: ''
-url: timblin.co
+baseurl: 'timblin-blog/'
+url: https://tatimblin.github.io/timblin-blob/
 twitter_username: TristanTimblin
 github_username: tatimblin
 collections:
