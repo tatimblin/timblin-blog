@@ -1,0 +1,78 @@
+a {
+    margin: 15px 0;
+    line-height: 1.5em;
+    font-family: $body;
+    font-weight: $lightWeight;
+    font-size: 16px;
+    cursor: pointer;
+    //color:$brand;
+    transition: all 400ms ease;
+    &:hover {
+        color: lighten($brand, 20%);
+        text-decoration: none !important;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading;
+    margin:0;
+}
+
+h1 {
+    font-size: 84px;
+    font-weight: $heavyWeight;
+    color: $h-text;
+    line-height: 1em;
+}
+
+h2 {
+    font-size: 42px !important;
+    font-weight: $heavyWeight;
+    color: $h-text;
+    line-height: 1.33em;
+}
+
+h3 {
+    font-family: $heading;
+    font-size: 30px;
+    font-weight: $heavyWeight;
+    color: $h-text;
+    line-height: 1.5em;
+}
+
+h4 {
+    font-family: $body;
+    font-size: 30px;
+    font-weight: $lightWeight;
+    color: $h-text;
+    line-height: 1.5em;
+}
+
+h5 {
+    font-family: $heading;
+    font-size: 16px;
+    font-weight: $heavyWeight;
+    color: $h-text;
+    line-height: 1.5em;
+}
+
+h6 {
+    font-family: $body;
+    font-size: 16px;
+    font-weight: $lightWeight;
+    color: $h-text;
+    line-height: 1.5em;
+}
+
+p {
+    margin: 15px 0;
+    line-height: 1.5em;
+    font-family: $body;
+    font-weight: $lightWeight;
+    font-size: 16px;
+}
+
+
+
+
+

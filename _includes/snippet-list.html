@@ -1,0 +1,16 @@
+<div class="snippet-list">
+{% for post in site.categories.snippets %}
+    <div class="snippet-list-item_wrap">
+    <a class="snippet-list-a" href="{{ post.url | prepend: site.baseurl }}">
+        <div class="snippet-list-item">
+            <div class="snippet-list-item-type">
+                <h5>{{ post.type }}</h5>
+            </div>
+            <div class="snippet-list-item-title">
+                <h4>{{ post.title }}</h4>
+            </div>
+        </div>
+    </a>
+    </div>
+{% endfor %}
+</div>

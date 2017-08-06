@@ -1,0 +1,21 @@
+<div class="section section-snippet">
+    <div class="section-item section-desc">
+        <h6>timblin.co/snippets</h6>
+        <h3>Code Snippets</h3>
+        <p>Small and unique code solutions to various problems I’ve come across in my projects.</p>
+        <a href="/snippets" class="section-btn">View All</a>
+    </div>
+    <div class="section-item section-field section-field-snippet">
+        <div class="shadow"></div>
+        <div class="section-field-post_wrap">
+            {% for post in site.categories.snippets limit:20 %}
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                <div class="section-field-post">
+                    <h5>{{ post.type }}</h5>
+                    <p>{{ post.title }}</p>
+                </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

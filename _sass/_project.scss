@@ -1,0 +1,77 @@
+.project-hero {
+    position: relative;
+    margin: 0;
+    background-color: #bfbfbf;
+    @include media-query($screen-md) {
+        margin: 45px 45px 0 45px;
+    }
+    canvas {
+        position: absolute;
+        width: 100%; height: 100%;
+    }
+    &-copy {
+        max-width: $screen-md + 30;
+        margin: 0px auto;
+        padding: 200px 15px;
+        h6 {
+            max-width: 450px;
+        }
+    }
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: $screen-md;
+    margin: 60px auto 0 auto;
+    padding: 0 15px;
+    border-bottom: 2px dashed lighten($text,20%);
+    &-list {
+        width: 100%;
+        @include media-query($screen-xs) {
+            width: 45%;
+        }
+        @include media-query($screen-sm) {
+            width: 23%;
+        }
+        padding: 0 0;
+        h5 {
+            position: relative;
+            padding: 0 0 15px 0;
+            margin: 0 0 30px 0;
+            &:after {
+                position: absolute;
+                content:'';
+                width: 50px; height: 4px;
+                left: 0; bottom: 0;
+                background-color: $text;
+            }
+        }
+        &-item {
+            height: 150px;
+            @include media-query($screen-sm) {
+                height: 240px;
+            }
+            overflow: hidden;
+            h3 {
+                min-height: 2.8em;
+            }
+            p {
+                overflow: hidden;
+                color: $text;
+                opacity: 1;
+                @include media-query($screen-sm) {
+                    opacity: 0.2;
+                }
+                transition: all 600ms ease 200ms;
+            }
+            &:hover {
+                p {
+                    opacity: 0.75;
+                    transition: all 400ms ease;
+                }
+            }
+        }
+    }
+}

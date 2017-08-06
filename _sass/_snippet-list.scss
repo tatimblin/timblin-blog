@@ -1,0 +1,72 @@
+.snippet-list {
+    max-width: $screen-sm;
+    margin: 90px auto;
+}
+
+.snippet-list-item {
+    margin: 60px 0;
+    text-align: center;
+    &-type {
+        h5 {
+            text-align: center;
+            line-height: 3em;
+        }
+    }
+    &-title {
+        display: inline-block;
+        padding: 0 15px;
+        h4 {
+            font-size: 30px;
+            text-decoration: none;
+            padding-bottom:5px;
+            border-bottom: 1px solid;
+            border-bottom-color: $purple;
+            transition: color 250ms ease;
+            &:hover {
+                color: $purple;
+                border-bottom-color: transparent;
+                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-50%);}}%3C/style%3E%3Cpath fill='none' stroke='#9362FF' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+                background-position: 0 1.5em;
+                background-size: auto 5px;
+                background-repeat:repeat-x;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.snippet-list-item_wrap:nth-child(odd) {
+    .snippet-list-item-title {
+        transform-origin: center center;
+        animation: rock 10s linear alternate infinite;
+    }
+}
+
+.snippet-list-item_wrap:nth-child(even) {
+    .snippet-list-item-title {
+        transform-origin: center center;
+        animation: rockout 6s linear alternate infinite;
+    }
+}
+
+@keyframes rock {
+    0% {
+        transform: translate(3px, 0) rotateY(0) rotateZ(2deg);
+    }
+    100% {
+        transform: translate(-3px, 10px) rotateY(15deg) rotateZ(-2deg);
+    }
+}
+
+@keyframes rockout {
+    0% {
+        transform: translate(10px, 0) rotateX(0) rotateZ(2deg);
+    }
+    100% {
+        transform: translate(-10px, 5px) rotateX(5deg) rotateZ(-2deg);
+    }
+}
+
+.snippet-list-item:hover .snippet-list-item-title h4 {
+    
+}

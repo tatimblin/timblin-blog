@@ -1,0 +1,79 @@
+// ### TYPOGRAPHY ###
+// -----------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Assistant:700|Montserrat:300,500');
+
+
+$heading: "Assistant", Helvetica, Arial, "Lucida Grande", sans-serif;
+$body: "Montserrat", sans-serif;
+
+$lightWeight: 300;
+$midWeight:   500;
+$heavyWeight: 700;
+
+
+// ### COLORS ###
+// -----------------------------------------
+
+$dark: #262626 ;
+$black: #262626 ;
+$white: #fefefe ;
+
+// Material Colors (500)
+$red:    #FF1744 ;
+$blue:   #2196F3 ;
+$green:  #4CED9F ;
+$purple: #9362FF ;
+$orange: #FF9800 ;
+$grey:   #607D8B ;
+
+// Social
+$twitter: #1da1f2;
+$codepen: #343436;
+$github: #4078c0;
+$dribbble: #ea4c89;
+$email: #ea4335;
+
+$brand:  #A33E0B ;
+
+$bg: #f2f2f2 ;
+$text: $black;
+$h-text: $black;
+$p-text: $black;
+
+
+// ### SIZINGS ###
+// -----------------------------------------
+
+$screen-xs:  480px;
+$screen-sm:  768px;
+$screen-md:  992px;
+$screen-lg: 1220px;
+
+$spacing: 15px;
+
+$container-xs: $screen-xs + $spacing; 
+$container-sm: $screen-sm + $spacing;
+$container-md: $screen-md + $spacing * 2;
+$container-lg: $screen-lg + $spacing * 2;
+
+// Use media queries like this:
+// @include media-query($screen-sm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+
+// ### EASINGS ###
+// -----------------------------------------
+
+$bounce-in: cubic-bezier(0.25, 0.1, 0.16, 1.49);
+
+
+

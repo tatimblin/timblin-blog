@@ -1,0 +1,38 @@
+title: Tristan Timblin
+email: tatimblin@gmail.com
+description: >
+  A collection of my works, unique findings, and front-end web demos, that I
+  call the labs.
+baseurl: ''
+url: timblin.co
+twitter_username: TristanTimblin
+github_username: tatimblin
+collections:
+  projects: null
+defaults:
+  - scope:
+      path: ''
+      type: projects
+    values:
+      title: ''
+      type: ''
+      url: ''
+      overview: ''
+      goal: ''
+      specific: ''
+      live: ''
+      color: '#ffffff'
+      logo: ''
+      img: ''
+  - scope:
+      path: ''
+      type: posts
+    values:
+      title: ''
+      type: ''
+      categories: snippets
+      external: ''
+markdown: kramdown
+permalink: '/:categories/:title'
+#plugins: 
+#  - jekyll-admin
