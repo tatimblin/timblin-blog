@@ -36,14 +36,14 @@
 }
 
 .snippet-list-item_wrap:nth-child(odd) {
-    .snippet-list-item-title {
+    .snippet-list-item-title h4 {
         transform-origin: center center;
         animation: rock 10s linear alternate infinite;
     }
 }
 
 .snippet-list-item_wrap:nth-child(even) {
-    .snippet-list-item-title {
+    .snippet-list-item-title h4 {
         transform-origin: center center;
         animation: rockout 6s linear alternate infinite;
     }

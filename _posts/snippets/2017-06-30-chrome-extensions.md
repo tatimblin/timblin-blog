@@ -3,6 +3,8 @@ title: Three Chrome Extensions For Dissecting Any Site
 type: General
 categories: snippets
 layout: post
+selectedImg: http://image.vsco.co/1/598e18239281e41834989/598e195b4cd322004dee7124/vsco_081117.jpg
+selectedUrl: http://vsco.co/tristimb/media/598e195b4cd322004dee7124
 ---
 
 When looking around at your favorite sites for design inspiration, specific informations can be valuable when beginning your own work. Picking up a color scheme or getting a peak under the hood at the technologies that made it possible, can be crucial to starting off right. Here are some of the tools I use to getting that information quickly and outside of scanning through code.

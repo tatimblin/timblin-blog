@@ -18,3 +18,10 @@
 
 <script src="{{ "/js/snippet-list.js" | prepend: site.baseurl }}"></script>
 {% endif %}
+
+
+{% if page.layout == 'post' %}
+<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
+<script src="{{ "/js/snippet.js" | prepend: site.baseurl }}"></script>
+{% endif %}

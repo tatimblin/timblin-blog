@@ -4,6 +4,8 @@ layout: post
 date: 2016-10-15 22:49:03 -0400
 categories: snippets
 type: CSS
+selectedImg: http://image.vsco.co/1/598e18239281e41834989/598e19ba4cd322004dee7126/vsco_081117.jpg
+selectedUrl: http://vsco.co/tristimb/media/598e19ba4cd322004dee7126
 ---
 
 #### Background

@@ -4,15 +4,17 @@ layout: post
 date: 2017-01-00 22:49:03 -0400
 categories: snippets
 type: CSS
+selectedImg: http://image.vsco.co/1/598e18239281e41834989/598e19974cd322004dee7125/vsco_081117.jpg
+selectedUrl: http://vsco.co/tristimb/media/598e19974cd322004dee7125
 ---
 
-#### Introduction
+### Introduction
 
 Starting off these posts with a real easy one. I came across this a bit ago while making a css logo animate on hover. Some elements needed as much as a three second delay, but on mouse out this delay was unbearably slow I needed a solution to changing these timings.
 
 You’re gonna laugh I wrote about something so simple, but this did not come to me as a possibility for the longest time, and I couldn’t find anyone explaining this either.
 
-#### Setup Transition
+### Setup Transition
 
 So here’s the trick you have your typical transition on hover.
 
@@ -26,7 +28,7 @@ So here’s the trick you have your typical transition on hover.
 }
 {% endhighlight %}
 
-#### Hover Property
+### Hover Property
 
 Then on the hover you take whatever value you’d like the ‘in’ hover and set it specifically there. (The first delay becomes the ‘out’ value.)
 
