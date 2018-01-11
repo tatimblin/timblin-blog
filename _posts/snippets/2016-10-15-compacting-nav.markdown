@@ -18,7 +18,7 @@ Similarly to every common web functionality out there, you can find a dozen ways
 
 Deciding to go about creating a new way to control navigation size for myself. I started looking into a CSS solution for my nav, as I knew I wanted it animated and am most familiar with web animation using CSS.
 
-![](../img/snippet/compacting-nav.gif)
+![](../../img/snippet/compacting-nav.gif)
 
 Here's how I did it.
 

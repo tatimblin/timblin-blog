@@ -3,8 +3,8 @@ email: tatimblin@gmail.com
 description: >
   A collection of my works, unique findings, and front-end web demos, that I
   call the labs.
-baseurl: "/timblin-blog"
-url: "https://tatimblin.github.io/timblin-blog/"
+baseurl: ""
+url: "d3i2r9o4dv2k8l.cloudfront.net"
 twitter_username: TristanTimblin
 github_username: tatimblin
 collections:
@@ -15,14 +15,10 @@ defaults:
       type: projects
     values:
       title: ''
-      type: ''
+      role: ''
+      team: ''
+      desc: ''
       url: ''
-      overview: ''
-      goal: ''
-      specific: ''
-      live: ''
-      color: '#ffffff'
-      logo: ''
       img: ''
   - scope:
       path: ''
@@ -33,6 +29,6 @@ defaults:
       categories: snippets
       external: ''
 markdown: kramdown
-permalink: '/:categories/:title'
+permalink: '/:categories/:title/'
 #plugins: 
 #  - jekyll-admin

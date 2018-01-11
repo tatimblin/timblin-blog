@@ -69,11 +69,39 @@ $container-lg: $screen-lg + $spacing * 2;
     }
 }
 
+@mixin bigger($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+@mixin smaller($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
 
 // ### EASINGS ###
 // -----------------------------------------
 
 $bounce-in: cubic-bezier(0.25, 0.1, 0.16, 1.49);
+$ease: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+
+// ### ANIMATION ###
+// -----------------------------------------
+
+@keyframes fade-in {
+    from {
+        transform: translateY($spacing);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 

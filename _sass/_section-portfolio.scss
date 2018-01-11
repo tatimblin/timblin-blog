@@ -1,0 +1,172 @@
+// INTRO
+
+.intro-wrap {
+    margin: 0 0 $spacing*4 0;
+    background-image: linear-gradient(0deg, $white, $bg);
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    @include smaller ($screen-sm) {
+        flex-direction: column;
+    }
+    align-items: baseline;
+    max-width: $screen-md;
+    margin: 0 auto;
+    padding: 18vh $spacing;
+    &-content {
+        max-width: 100%;
+        @include bigger ($screen-sm) {
+            //max-width: 50%;
+        }
+        //text-align: center;
+        h6 {
+            opacity: 0;
+            animation: fade-in 300ms 900ms $ease 1 forwards;
+            &:before {
+                content: '— ';
+            }
+        }
+    }
+}
+
+#my-name span {
+    display: inline-block;
+    transform: translateY(-$spacing*2);
+    opacity: 0;
+}
+
+@for $i from 1 through 50 {
+  #my-name span:nth-child(#{$i}) {
+	  animation: fade-in 300ms (#{$i*0.02s+400ms}) $ease 1 forwards;
+  }
+}
+
+
+// FEATURED PROJECTS
+
+.project {
+	display: flex;
+	align-items: center;
+	position: relative;
+	max-width: $screen-md;
+	margin: 30px auto;
+	&-img {
+		width: 50%; height: $screen-md/2 + 18px;
+        overflow: hidden;
+		&-cell {
+			width: 100%; height: $screen-md/2;
+			background-size: cover;
+			&:nth-child(1) {
+				background-image: url('https://images.unsplash.com/photo-1484755560615-a4c64e778a6c?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=553e88c72d7dfbadc29ba7a33687b7e2');
+			}
+			&:nth-child(2) {
+				background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=643923940499a07b3ea1fd82597ce369');
+			}
+			&:nth-child(3) {
+				background-image: url('https://images.unsplash.com/photo-1469022563428-aa04fef9f5a2?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=46f13088234e5b1096e03787df5362fc');
+			}
+		}
+	}
+	&-nav {
+		position: absolute;
+		width: 66%;
+		right: 0;
+        padding: $spacing 0 $spacing*2 0;
+        overflow: hidden;
+		&-cell {
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+			&-title {
+                overflow: hidden;
+                h2 {
+                    font-size: 3em;
+                    line-height: 1.5em;
+                    transform: translateY(1.5em);
+                    transition: all 400ms 200ms ease;
+                    overflow: hidden;
+			    }
+            }
+			p {
+				margin: 0 0 0 25%;
+				padding: 0 $spacing;
+				font-size: 1em;
+				opacity: 0;
+				transition: opacity 200ms 600ms ease;
+                a {
+                    float: right;
+                    text-align: right;
+                    font-family: $heading;
+                    font-size: .75em;
+                    font-weight: $heavyWeight;
+                    color: $text;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+			}
+		}
+	}
+}
+
+.is-selected {
+	h2 {
+		transform: translateY(0);
+	}
+	p {
+		opacity: 1;
+	}
+}
+
+.flickity-prev-next-button {
+	position: relative;
+	left: 25% !important;
+	bottom: -$spacing;
+    background: none;
+	opacity:0.5;
+	transition: opacity 200ms ease;
+	&:hover{
+		opacity: 1;
+    }
+}
+
+.flickity-page-dots {
+	bottom: 0px;
+	.dot {
+		width: 4px; height: 4px;
+	}
+}
+
+@media screen and (max-width: $screen-sm) {
+	.project {
+		flex-direction: column;
+		&-img {
+			width: 100%;
+		}
+		&-nav {
+			position: relative;
+			width: 100%;
+			margin: 0 15px;
+            &-cell {
+                &-title {
+                    padding: 0 $spacing;
+                }
+            }
+			p {
+				margin: 0;
+			}
+		}
+	}
+    .flickity-prev-next-button {
+        position: relative;
+        left: $spacing !important;
+    }
+}
+
+//Fadein
+.project {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fade-in 300ms 1200ms $ease 1 forwards;
+}

@@ -1,77 +1,210 @@
 .project-hero {
-    position: relative;
-    margin: 0;
-    background-color: #bfbfbf;
-    @include media-query($screen-md) {
-        margin: 45px 45px 0 45px;
-    }
-    canvas {
-        position: absolute;
-        width: 100%; height: 100%;
-    }
-    &-copy {
-        max-width: $screen-md + 30;
-        margin: 0px auto;
-        padding: 200px 15px;
-        h6 {
-            max-width: 450px;
-        }
+    max-width: $screen-md;
+    margin: 45px auto 0 auto;
+    padding: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: showText 300ms 500ms ease 1 forwards;
+    @include media-query ($screen-sm) {
+        margin: 90px auto;
     }
 }
 
-.project {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: $screen-md;
-    margin: 60px auto 0 auto;
-    padding: 0 15px;
-    //border-bottom: 2px dashed lighten($text,20%);
-    &-list {
-        width: 100%;
-        @include media-query($screen-xs) {
-            width: 45%;
-        }
-        @include media-query($screen-sm) {
-            width: 23%;
-        }
-        padding: 0 0;
-        h5 {
-            position: relative;
-            padding: 0 0 15px 0;
-            margin: 0 0 30px 0;
-            &:after {
-                position: absolute;
-                content:'';
-                width: 50px; height: 4px;
-                left: 0; bottom: 0;
-                background-color: $text;
-            }
-        }
-        &-item {
-            height: 150px;
-            @include media-query($screen-sm) {
-                height: 240px;
-            }
-            overflow: hidden;
-            h3 {
-                min-height: 2.8em;
-            }
-            p {
-                overflow: hidden;
-                color: $text;
-                opacity: 1;
-                @include media-query($screen-sm) {
-                    opacity: 0.2;
-                }
-                transition: all 600ms ease 200ms;
-            }
-            &:hover {
-                p {
-                    opacity: 0.75;
-                    transition: all 400ms ease;
-                }
-            }
-        }
+@keyframes showText {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
 }
+
+//.project {
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-between;
+//    max-width: $screen-md;
+//    margin: 60px auto 0 auto;
+//    padding: 0 15px;
+//    //border-bottom: 2px dashed lighten($text,20%);
+//    &-list {
+//        width: 100%;
+//        @include media-query($screen-xs) {
+//            width: 45%;
+//        }
+//        @include media-query($screen-sm) {
+//            width: 23%;
+//        }
+//        padding: 0 0;
+//        h5 {
+//            position: relative;
+//            padding: 0 0 15px 0;
+//            margin: 0 0 30px 0;
+//            &:after {
+//                position: absolute;
+//                content:'';
+//                width: 50px; height: 4px;
+//                left: 0; bottom: 0;
+//                background-color: $text;
+//            }
+//        }
+//        &-item {
+//            height: 150px;
+//            @include media-query($screen-sm) {
+//                height: 240px;
+//            }
+//            overflow: hidden;
+//            h3 {
+//                min-height: 2.8em;
+//            }
+//            p {
+//                overflow: hidden;
+//                color: $text;
+//                opacity: 1;
+//                @include media-query($screen-sm) {
+//                    opacity: 0.2;
+//                }
+//                transition: all 600ms ease 200ms;
+//            }
+//            &:hover {
+//                p {
+//                    opacity: 0.75;
+//                    transition: all 400ms ease;
+//                }
+//            }
+//        }
+//    }
+//}
+
+* { box-sizing: border-box; }
+
+.project {
+	position: relative;
+    max-width: $screen-lg;
+	margin: 3vw auto;
+    padding: 0 3vw;
+    overflow: hidden !important;
+    
+    opacity: 0;
+    transform: translateY(20px);
+    animation: showText 600ms 800ms ease 1 forwards;
+	&-img {
+        overflow: hidden !important;
+		&-cell {
+			width: 100.1%; height: 600px;
+			margin-right: 0;
+  			overflow: hidden !important;
+			transition: width 500ms 200ms ease;
+			img {
+				display: block;
+                min-width: 100%;
+                transform-origin: center center;
+				transition: width 500ms 200ms ease;
+			}
+		}
+	}
+	
+	&-nav {
+		&_wrap {
+			position: absolute;
+			width: $screen-lg;
+			top: 45px;
+			pointer-events: none;
+		}
+		pointer-events: none;
+		&-cell {
+			width: $screen-lg - 400; height: 390px;
+			top: 90px;
+			padding: 30px 0;
+			opacity: 0;
+            @include media-query ($screen-sm) {
+			    transition: opacity 600ms ease;
+            }
+			&-detail {
+				width: 300px; height: 300px;
+				margin: 0 0 30px 0;
+				padding: 30px;
+				background-color: #fff;
+                border-radius: 1px;
+				box-shadow: rgba(50,50,50,0.26) 0 7px 42px;
+				pointer-events:all;
+				span {
+					display: block;
+					margin: 15px 0 15px 0;
+					font-family: $heading;
+					font-size: 0.5em;
+					letter-spacing: 2px;
+                    text-transform: uppercase;
+				}
+                h2 {
+                    line-height: 1.2em;
+                }
+				p {
+					line-height: 1.6em;
+				}
+			}
+		}
+		.is-selected {
+			margin: 0 0 0 3vw;
+			opacity: 1;
+			.project-nav-cell-detail {
+				pointer-events: none !important;
+			}
+		}
+	}
+	&:hover .project-nav-cell {
+		opacity: 1;
+	}
+	&:hover .project-img-cell {
+        @include media-query ($screen-sm) {
+            width: 90%;
+        }
+        img {
+            
+        }
+	}
+}
+
+@media screen and (max-width: $screen-lg) {
+	.project-nav-cell {
+		width: 55vw;
+        top: 30px;
+        padding: 15px 0;
+	}
+}
+
+@media screen and (max-width: 700px) {
+    .project {
+        height: 62vw;
+    }
+    .project-nav {
+		display: none;
+	}
+}
+
+//
+//@media screen and (min-width: 1200px) {
+//	.project-nav-cell {
+//		width: 67vw;
+//	}
+//}
+//
+//@media screen and (min-width: 1400px) {
+//	.project-nav-cell {
+//		width: 71vw;
+//	}
+//}
+//
+//@media screen and (min-width: 1650px) {
+//	.project-nav-cell {
+//		width: 74vw;
+//	}
+//}
+//
+//@media screen and (min-width: 2000px) {
+//	.project-nav-cell {
+//		width: 78vw;
+//	}
+//}

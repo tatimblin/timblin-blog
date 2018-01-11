@@ -1,7 +1,33 @@
+
 <div class="project-hero">
-    <canvas id="canvas"></canvas>
-    <div class="project-hero-copy">
-        <h2>Tristan Timblin</h2>
-        <h6>Interactive web developer, bringing meaningful animation to the web.</h6>
-    </div>
+   <h1>Tristan Timblin, an interactive developer bringing meaningful animation to the web.</h1>
 </div>
+
+<div class="project">
+	
+	<div class="project-img">
+	    {% for post in site.projects %}
+	        <div class="project-img-cell" data-flickity-bg-lazyload="img/project/{{ post.img }}">
+                <a href="{{ post.link }}" target="_blank">
+                    <img src="img/project/{{ post.img }}" alt="Tristan Timblin Project – {{ post.title }}">
+                </a>
+            </div>
+	    {% endfor %}
+	</div>
+	
+	<div class="project-nav_wrap">
+		<div class="project-nav">
+            {% for post in site.projects %}
+                <div class="project-nav-cell">
+                    <div class="project-nav-cell-detail">
+                        <h2>{{ post.title }}</h2>
+                        <span>{{ post.role }} • {{ post.team }}</span>
+                        <p>{{ post.desc }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+		</div>
+	</div>
+	
+</div>
+

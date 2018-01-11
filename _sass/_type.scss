@@ -19,10 +19,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 84px;
+    font-size: 42px;
     font-weight: $heavyWeight;
     color: $h-text;
-    line-height: 1em;
+    line-height: 1.21em;
+    @include media-query($screen-sm) {
+        font-size: 63px;
+    }
+    @include media-query($screen-md) {
+        font-size: 84px;
+    }
 }
 
 h2 {
