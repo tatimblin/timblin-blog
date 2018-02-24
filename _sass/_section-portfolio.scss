@@ -23,7 +23,7 @@
         //text-align: center;
         h6 {
             opacity: 0;
-            animation: fade-in 300ms 900ms $ease 1 forwards;
+            animation: fade-in 300ms 1600ms $ease 1 forwards;
             &:before {
                 content: '— ';
             }
@@ -31,15 +31,22 @@
     }
 }
 
-#my-name span {
-    display: inline-block;
-    transform: translateY(-$spacing*2);
+#my-name {
     opacity: 0;
+    span {
+        opacity: 0;
+        min-width: 10px;
+        display: inline-block;
+        transform: translateY(-$spacing*2);
+    }
 }
 
 @for $i from 1 through 50 {
-  #my-name span:nth-child(#{$i}) {
-	  animation: fade-in 300ms (#{$i*0.02s+400ms}) $ease 1 forwards;
+  #my-name {
+      opacity: 1;
+      span:nth-child(#{$i}) {
+	      animation: fade-in 400ms (#{$i*0.04s+600ms}) $ease 1 forwards;
+      }
   }
 }
 
@@ -168,5 +175,5 @@
 .project {
     opacity: 0;
     transform: translateY(30px);
-    animation: fade-in 300ms 1200ms $ease 1 forwards;
+    animation: fade-in 300ms 2000ms $ease 1 forwards;
 }

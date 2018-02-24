@@ -152,7 +152,7 @@ var scene = new ScrollMagic.Scene({triggerElement: ".section-field-snippet", tri
 var connectEle = document.getElementsByClassName('section-social')[0];
 var connectWrap = document.getElementsByClassName('section-connect_wrap')[0];
 var socialColor = [
-        '#1da1f2', '#343436', '#4078c0', '#ea4c89', '#ea4335'
+        '#1da1f2', '#343436', '#1f1f1f', '#4078c0', '#ea4c89', '#ea4335'
     ];
 
 for(i=0; i<connectEle.children.length;i++){

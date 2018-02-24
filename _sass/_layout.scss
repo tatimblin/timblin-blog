@@ -200,7 +200,7 @@
         background-color: #aa84ff;
         background-image: url("data:image/svg+xml,%3Csvg width='40' height='12' viewBox='0 0 40 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 6.172L6.172 0h5.656L0 11.828V6.172zm40 5.656L28.172 0h5.656L40 6.172v5.656zM6.172 12l12-12h3.656l12 12h-5.656L20 3.828 11.828 12H6.172zm12 0L20 10.172 21.828 12h-3.656z' fill='%239362ff' fill-opacity='0.73' fill-rule='evenodd'/%3E%3C/svg%3E");
         
-        animation: post-header-background 800ms 200ms $ease 1 forwards;
+        animation: post-header-background 800ms 0.75s $ease 1 forwards;
     }
 }
 
@@ -218,14 +218,14 @@
     left: 0;
     background-color: $text;
     overflow: hidden;
-    animation: post-header-preview 800ms 200ms $ease 1 forwards;
+    animation: post-header-preview 800ms 0.75s $ease 1 forwards;
     &_inner {
         position: absolute;
         width: 50vw; height: 100%;
         top:0; left:0; right: 0;
         background-size: cover;
         background-position: center center;
-        transition: transform 8s $ease;
+        transition: transform 8s linear;
         &:hover {
             transform: scale(1.07);
         }
@@ -253,7 +253,7 @@
     padding: 0 15px;
     opacity: 0;
     pointer-events: none;
-    animation: post-header 300ms 1150ms ease-in-out 1 forwards;
+    animation: post-header 300ms 1.65s ease-in-out 1 forwards;
 }
 
 @keyframes post-header {
@@ -289,7 +289,7 @@
     margin: 0 auto 120px auto;
     padding: 0 15px;
     opacity: 0;
-    animation: post-header 300ms 1450ms ease-in-out 1 forwards;
+    animation: post-header 300ms 2s ease-in-out 1 forwards;
     h3 {
         position: relative;
         display: block;
@@ -307,7 +307,10 @@
     p {
         max-width: $screen-sm;
         margin: 0 auto;
-        padding: 30px 60px 0 60px;
+        padding: 15px 60px 15px 60px;
+        @include smaller ($screen-xs) {
+            padding: 0;
+        }
         line-height: 2em;
     }
     a {
